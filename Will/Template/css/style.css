@@ -21,7 +21,7 @@ grid-template-areas:
   'header header header header header header'
   '. main main main main .'
   'footer footer footer footer footer footer';
-grid-gap: 10px;
+grid-gap: 30px;
 height: 100%;
 }
 .background{
@@ -39,7 +39,6 @@ height: 100%;
   z-index: 5;
 }
 .container{
-  margin-top: 20px;
   display: grid;
   grid-template-rows: 23px 23px auto;
   grid-template-columns: 15% 40% 45%;
