@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, width=device-width">
+  <title>Berkshire PHAB Demo Page</title>
+  <link href='http://fonts.googleapis.com/css?family=Changa+One|Open+Sans:400italic,700italic,400,700,800' rel='stylesheet' type='text/css'>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    function DropDown() {
+      var x = document.getElementById("topnav");
+      if (x.className === "nav") {
+        x.className += " responsive";
+      } else {
+        x.className = "nav";
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <div class="background">
+    <div class="grid-container">
+      <div class="nav" id="topnav">
+        <img class="img" src="assets/images/berkshirephablogo.gif" alt="logo" onclick="DropDown()">
+        <div class="butts">
+          <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="DropDown()">&#9776;</a>
+          <a href="#Home" class="active">HOME</a>
+          <a href="#About Us">ABOUT US</a>
+          <a href="#Support Us">CONTACT US</a>
+          <a href="#Join Us">JOIN US</a>
+        </div>
+      </div>
+      <div class="main"  style="width: 100%;">
+        <div class="container">
+          <div class="title right">
+            <h1>Contact Us</h1>
+          </div>
+          <div class="body">
+            <div class="image-card" style="float: left; margin: 5px;">
+              <img src="assets/images/guidePhab.jpg" style="width: 100%; height: auto;" />
+            </div>
+          </div>
+          <div class="text2">
+            <h2>Phone Number</h1>
+            <a href="tel:01189168412">01189168412</a>
+            <h2>Email</h1>
+            <a href="info@berkshire.org">info@berkshire.org</a>
+            <h2>Facebook</h1>
+            <a href="https://www.facebook.com/BerkshirePhab/">Phab</a>
+          </div>
+          <div class="text3">
+            <h2>Twitter</h1>
+            <a href="https://twitter.com/phab_charity?lang=en">@phab_charity</a>
+            <h2>Location</h1>
+            <p id="hehe">
+              Bershire Phab<br>
+              The MAPP Center<br>
+              22 Mount Pleasant<br>
+              Reading<br>
+              RG1 2TD
+            </p>
+          </div>
+        </div>
+      </div>
+        <div class="main1"  style="width: 100%;">
+          <div class="container">
+            <div class="title left">
+              <h1>Map</h1>
+            </div>
+            <div class="body">
+              <div class="image-card" style="float: right; margin: 5px;">
+                <img src="assets/images/guidePhab.jpg" style="width: 100%; height: auto;" />
+              </div>
+            </div>
+            <div id="map" class="mapy">
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="footer-content">
+          <div class="email">
+            Email:<br><a href="mailto:info@berkshirephab.org">info@berkshirephab.org</a>
+          </div>
+          <div class="mobile-email">
+            <a href="mailto:info@berkshirephab.org"><i class="fas fa-envelope-square"></i>
+                </a>
+          </div>
+
+          <div class="social">
+            <a class="social-image" href="https://www.facebook.com/BerkshirePhab"><i class="fab fa-facebook-square"></i><a>
+                        <a class="social-image" href="https://twitter.com/phab_charity"><i class="fab fa-twitter-square"></i>
+                        </a>
+          </div>
+
+          <div class="phone">
+            Phone Number:<br><a href="tel:0118 916 8412">0118 916 8412</a> or<br><a href="tel:0118 916 8412">0118 916 8412</a>
+          </div>
+          <div class="mobile-phone">
+            <a href="tel:0118 916 8412"><i class="fas fa-phone-square"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script>
+function myMap() {
+  var myCenter = new google.maps.LatLng(51.455886,-0.969849);
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {center: myCenter, zoom: 13};
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+  var marker = new google.maps.Marker({position:myCenter});
+  marker.setMap(map);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCebTCxYt3H0W9ENvebSJLqzOk75jG6FDQ&callback=myMap"></script>
