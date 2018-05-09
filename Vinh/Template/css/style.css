@@ -159,7 +159,7 @@ table, th, td {
     margin-left: 5px;
 }
 
-.active:after {
+.activefaq:after {
     content: "\2212";
 }
 
