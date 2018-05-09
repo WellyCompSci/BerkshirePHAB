@@ -94,12 +94,6 @@ height: 100%;
   z-index: 3;
 }
 
-.general {
-  float: left;
-  margin: 0;
-  display: inline-block;
-}
-
 .bgopacity {
   background-color: rgba(0, 0, 0, 0.2);
   top: 0;
@@ -114,12 +108,6 @@ height: 100%;
   margin-top: 35px;
 }
 
-.general a {
-  color: white;
-  margin: 0;
-  display: block;
-}
-
 .emailbutt a {
   text-decoration: none;
   background-color: white;
@@ -130,9 +118,57 @@ height: 100%;
   font-weight: bold;
   padding: 10px;
 }
+.emailbutt a:hover {
+  background-color: #da291c;
+  color: white;
+}
+
+.linebreak {
+  height: 3px;
+  width: 60px;
+  background-color: #004d00;
+  margin: 20px auto 20px auto;
+}
 
 table, th, td {
     border: 1px solid black;
+}
+
+.accordion {
+    background-color: #eee;
+    color: #006600;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+.accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
 }
 
 /* NAV */

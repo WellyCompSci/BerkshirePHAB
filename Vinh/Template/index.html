@@ -16,16 +16,7 @@
         x.className = "nav";
       }
     }
-    function myMap() {
-        var mapOptions = {
-            center: new google.maps.LatLng(51.5, -0.12),
-            zoom: 10,
-            mapTypeId: google.maps.MapTypeId.HYBRID
-        }
-    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-    }
   </script>
-  <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
 </head>
 
 <body>
@@ -60,19 +51,24 @@
               </div>
               </div>
             </div>
-            <div class="general">
-              <a style="text-align: center;"><h3>Got a question?</h3></a>
-              <a><h4>How can I contact BerkshirePhab?</h4></a>
-              <a>You can contact us via our email or call us on 0118 916 8412.</a>
-              <a><h4>Can I donate by telephone?</h4></a>
-              <a>We gladly accept donations over the phone, just give us a call.</a>
-              <a><h4>Can my donation be refunded?</h4></a>
-              <a>Unforunately not, charity laws state that all donations are non-refundable.</a>
-              <a><h4></h4></a>
-              <a></a>
-              <div id="map" style="width:200px;height:200px;float:right;"></div>
-              <a><h4>What are your opening hours?</h4></a>
-              <table>
+            <div class="linebreak">
+            </div>
+            <a style="text-align: center;color:white;"><h3>Frequently Asked Questions</h3></a>
+            <button class="accordion">How can I contact BerkshirePhab?</button>
+            <div class="panel">
+              <p>You can contact us via our email or call us on 0118 916 8412.</p>
+            </div>
+            <button class="accordion">Can I donate by telephone?</button>
+            <div class="panel">
+              <p>We gladly accept donations over the phone, just give us a call.</p>
+            </div>
+            <button class="accordion">Can my donation be refunded?</button>
+            <div class="panel">
+              <p>Unforunately not, charity laws state that all donations are non-refundable.</p>
+            </div>
+            <button class="accordion">What are your opening hours?</button>
+            <div class="panel">
+              <table style="margin: 10px 0px 10px 0px;">
                 <tr>
                   <th>Club</th>
                   <th>Times</th>
@@ -98,6 +94,10 @@
                   <td>N/A</td>
                 </tr>
               </table>
+            </div>
+            <button class="accordion">Where is your centre located?</button>
+            <div class="panel">
+              <p>The main Berkshire Phab Centre is located at:<br /><br />Berkshire Phab<br />The MAPP Centre,<br />22 Mount Pleasant,<br />Reading<br />RG1 2TD</p>
             </div>
             <!-- <div class="image-card" style="float: left; margin: 5px;">
               <img src="assets/images/sensoryroom.jpg" style="width: 100%; height: auto;" />
@@ -134,4 +134,20 @@
       </div>
     </div>
   </div>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
+</script>
 </body>
