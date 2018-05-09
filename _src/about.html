@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, width=device-width">
+  <title>Berkshire PHAB Demo Page</title>
+  <link href='http://fonts.googleapis.com/css?family=Changa+One|Open+Sans:400italic,700italic,400,700,800' rel='stylesheet' type='text/css'>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    function DropDown() {
+      var w = parseInt(window.innerWidth);
+      if (w <= 550) {
+        var x = document.getElementById("butts");
+        if (x.className === "butts") {
+          x.className += " responsive";
+        } else {
+          x.className = "butts";
+        }
+      }
+    }
+
+    function openNav() {
+      document.getElementById("butts").style.width = "250px";
+      document.getElementById("icon").style.marginRight = "250px";
+      document.getElementById("darken").style.display = "block";
+      var w = parseInt(window.innerWidth);
+    }
+
+    function closeNav() {
+      document.getElementById("butts").style.width = "";
+      document.getElementById("icon").style.marginRight = "0";
+      document.getElementById("darken").style.display = "none";
+    }
+
+
+    function autocloseNav(x) {
+      if (x.matches) {
+        document.getElementById("butts").style.width = "";
+        document.getElementById("icon").style.marginRight = "0";
+        document.getElementById("darken").style.display = "none";
+      }
+    }
+    var x = window.matchMedia("(min-width: 1200px)")
+    autocloseNav(x)
+    x.addListener(autocloseNav)
+  </script>
+</head>
+
+<body>
+  <div class="background">
+    <div class="grid-container">
+      <div class="nav" id="topnav">
+        <a href="#Home"><img class = "img" id="img" src="assets/images/berkshirephablogo.gif" alt="logo" onclick="DropDown()"></a>
+        <a href="javascript:void(0);"><span style="font-size:15px;" class="icon" id="icon" onclick="openNav()">&#9776;</span></a>
+        <div class="butts" id="butts">
+          <a href="./" class="homebutt">HOME</a>
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="./about.html">ABOUT</a>
+          <a href="#About">EVENTS</a>
+          <a href="./volunteering.html">VOLUNTEER</a>
+          <a href="./contact.html">CONTACT</a>
+          <a href="#Donate" class="donatebtn">DONATE</a>
+        </div>
+      </div>
+      <div id="darken">
+      </div>
+      <div class="main">
+        <div class="container">
+          <div class="title">
+            <h1>About Us</h1>
+          </div>
+          <div class="body">
+            <!-- Edit Below Here -->
+            <div class="image-card" style="float: right; margin: 5px;">
+              <img src="assets/images/guidePhab.jpg" style="width: 100%; height: auto;" />
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lacinia sem in nisi accumsan malesuada vel sit amet metus. Mauris neque justo, facilisis eget massa eu, feugiat tincidunt ante. Duis malesuada, risus condimentum blandit porttitor,
+              sem justo ornare risus, vel ornare ligula lorem vel purus. Morbi sit amet lorem quis libero luctus aliquet. Duis eget est arcu. Morbi id nisi a elit sodales lobortis eget in lectus. Mauris a odio ex. Maecenas id risus mauris. Mauris nec
+              sollicitudin libero, sed interdum leo. Phasellus hendrerit ante at dui euismod, sit amet sagittis dolor aliquam. Ut vitae eleifend sem, sed egestas dui. Aliquam erat volutpat. Curabitur rutrum ex a lorem pulvinar hendrerit. Morbi iaculis,
+              ante eu eleifend dignissim, mi massa elementum enim, eget elementum dolor eros quis lacus. Pellentesque eget eros neque. Nam id arcu mi. Ut aliquet mauris id metus pharetra dapibus. Curabitur ornare lacinia mi, nec consectetur mauris rutrum
+              eu. Duis eget tellus posuere, volutpat risus ac, dapibus metus. Sed scelerisque sodales metus vitae pharetra. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent eu aliquam nunc. Nam eu
+              dolor tempor, tristique enim ac, bibendum velit. Maecenas in nunc risus. Fusce ut tellus ac libero condimentum congue. Donec id tempor orci, nec luctus libero. In hac habitasse platea dictumst. Maecenas ligula metus, faucibus et libero ac,
+              blandit commodo quam. Aenean tristique convallis ultricies.</p>
+            <div class="image-card" style="float: left; margin: 5px;">
+              <img src="assets/images/sensoryroom.jpg" style="width: 100%; height: auto;" />
+            </div>
+            <p>
+              Nullam nec laoreet lacus. Donec urna diam, cursus a egestas a, porttitor eu turpis. Fusce nec neque lectus. In dapibus sapien nec semper blandit. Praesent tincidunt massa quis laoreet mattis. Class aptent taciti sociosqu ad litora torquent per conubia
+              nostra, per inceptos himenaeos. Phasellus dapibus enim ac augue pretium, iaculis mattis sapien gravida. Praesent facilisis elit eu augue sollicitudin, non convallis ligula eleifend. Aliquam tempus dolor ac enim rutrum pharetra quis sed mauris.
+              Aenean id imperdiet urna, et porta arcu. Mauris ullamcorper erat quis lectus cursus, malesuada lobortis odio sollicitudin. Maecenas enim lacus, pellentesque et pharetra ut, tincidunt vel sem. Sed nibh nunc, faucibus id magna at, placerat
+              malesuada nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae accumsan nulla. Ut auctor ligula lorem, eget accumsan lectus tempus non. Ut a arcu ipsum. Fusce semper lacinia luctus. Fusce in lacus a nisl sodales feugiat.
+              Cras nec lacus a lectus tincidunt pharetra. Fusce condimentum est ut quam mollis scelerisque. Morbi luctus egestas ipsum, id egestas turpis pharetra non.</p>
+
+            <!-- Edit Above Here -->
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="footer-content">
+          <div class="email">
+            Email:<br><a href="mailto:info@berkshirephab.org">info@berkshirephab.org</a>
+          </div>
+
+          <div class="social">
+            <a class="social-image" href="https://www.facebook.com/BerkshirePhab"><i class="fab fa-facebook-square"></i><a>
+                        <a class="social-image" href="https://twitter.com/phab_charity"><i class="fab fa-twitter-square"></i>
+                        </a>
+          </div>
+
+          <div class="phone">
+            Phone Number:<br><a href="tel:0118 916 8412">0118 916 8412</a>&ensp;/&ensp;<a href="tel:0118 916 8413">0118 916 8413</a>
+          </div>
+          <div class="mobile">
+            <a href="mailto:info@berkshirephab.org"><i class="fas fa-envelope-square"></i></a>
+            <a href="https://www.facebook.com/BerkshirePhab"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://twitter.com/phab_charity"><i class="fab fa-twitter-square"></i></a>
+            <a href="tel:0118 916 8412"><i class="fas fa-phone-square"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
