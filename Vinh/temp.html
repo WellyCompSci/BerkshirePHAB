@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="temp.css">
+</head>
+<body>
+  <div class="nav" id="topnav">
+    <a href="#Home"><img class = "img" id="img" src="berkshirephablogo.gif" alt="logo" onclick="DropDown()"></a>
+    <a href="javascript:void(0);"><span style="font-size:15px;" class="icon" id="icon" onclick="openNav()">&#9776;</span></a>
+    <div class = "butts" id="butts">
+      <a href="#Home" class="homebutt">HOME</a>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="#About">ABOUT</a>
+      <a href="#About">EVENTS</a>
+      <a href="#Volunteer">VOLUNTEER</a>
+      <a href="#Contact">CONTACT</a>
+      <a href="#Donate" class="donatebtn">DONATE</a>
+    </div>
+  </div>
+  <div id="darken">
+  </div>
+  <div id="slideshow-container">
+  </div>
+  <div id="text">
+  </div>
+<script>
+function DropDown() {
+    var w = parseInt(window.innerWidth);
+    if(w <= 550) {
+      var x = document.getElementById("butts");
+      if (x.className === "butts") {
+          x.className += " responsive";
+      } else {
+          x.className = "butts";
+      }
+    }
+}
+function openNav() {
+    document.getElementById("butts").style.width = "250px";
+    document.getElementById("icon").style.marginRight = "250px";
+    document.getElementById("text").style.marginRight = "250px";
+    document.getElementById("darken").style.display = "block";
+    var w = parseInt(window.innerWidth);
+}
+
+function closeNav() {
+    document.getElementById("butts").style.width = "";
+    document.getElementById("icon").style.marginRight= "0";
+    document.getElementById("text").style.marginRight = "0";
+    document.getElementById("darken").style.display = "none";
+}
+
+
+function autocloseNav(x) {
+    if (x.matches) {
+      document.getElementById("butts").style.width = "";
+      document.getElementById("icon").style.marginRight= "0";
+      document.getElementById("text").style.marginRight = "0";
+      document.getElementById("darken").style.display = "none";
+    }
+}
+var x = window.matchMedia("(min-width: 1200px)")
+autocloseNav(x)
+x.addListener(autocloseNav)
+</script>
+
+</body>
+</html>

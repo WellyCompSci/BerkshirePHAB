@@ -1,0 +1,205 @@
+body {
+    font-family: "Lato", sans-serif;
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+    transition: background-color .5s;
+}
+
+#text {
+  transition: margin-right .5s;
+  word-wrap: break-word;
+  height: 200px;
+}
+
+.homebutt {
+  display: none !important;
+}
+
+.nav {
+  background-color: #44B83B;
+  width: 100%;
+  height: auto;
+  display: inline-block;
+  float: left;
+  position: relative;
+  max-height: 84.8px;
+}
+
+.img {
+  height: 100%;
+  display: inline-block;
+  float: left;
+  position: absolute;
+}
+
+.butts {
+  float: right;
+  display: inline-block;
+  color: green;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.butts a:not(.closebtn) {
+  float: left;
+  display: inline-block;
+  padding: 0 50px;
+  line-height: 85px;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.butts a:not(.donatebtn) {
+  color: #008000;
+}
+
+.nav a:hover {
+  background-color: #ddd;
+  text-decoration: none;
+  color: black;
+}
+
+.active {
+  background-color: white;
+}
+
+.closebtn {
+  display: none;
+}
+
+.icon {
+  display: none;
+  width: 103.7px;
+}
+
+.donatebtn {
+  color: white;
+  background-color: #da291c;
+}
+
+#darken {
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 1000;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .butts.responsive {position: relative; }
+  .butts:not(.closebtn) {
+    position: fixed;
+    height: 100%;
+    width: 0;
+    top: 0;
+    right: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    background-color: white;
+    z-index: 1001;
+  }
+  .closebtn {
+    display: block;
+    float: right;
+    top: 0;
+  }
+
+  .icon {
+    display: block;
+    float: right;
+    line-height: 85px;
+    text-align: center;
+    transition: margin-right 0.5s;
+    color: white;
+    font-size: 30px;
+  }
+  .icon:hover {
+    background-color: #ddd;
+    text-decoration: none;
+    color: black;
+  }
+
+  .butts a:hover {
+    color: #f1f1f1;
+  }
+
+  .butts a:not(.closebtn) {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    transition: 0.3s;
+    width: 100%;
+    padding: 0;
+    border-bottom: 1px solid #444;
+    border-bottom-width: thin;
+  }
+  .closebtn {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    transition: 0.3s;
+    width: 100%;
+    padding: 0;
+    line-height: 85px;
+    font-size: 30px;
+    color: black;
+    border-bottom: 1px solid #444;
+    border-bottom-width: thin;
+  }
+  .donate {
+    color: white;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .icon {
+    float: right;
+  }
+  .butts {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .butts:not(.closebtn) {
+    display: none;
+    width: 100%;
+    position: static;
+  }
+  .butts.responsive:not(.closebtn) {
+    display: inline-block !important;
+    text-align: center;
+    width: 100%;
+    left: 0;
+    right: 0;
+    padding: 0;
+    float: left;
+    z-index: 10;
+    border-top: 1px solid #444;
+  }
+  .img {
+    width: 100%;
+    height: auto;
+    position: static;
+  }
+  .icon {
+    display: none;
+  }
+  .closebtn {
+    display: none;
+  }
+  .homebutt {
+    display: block !important;
+  }
+  .butts {
+    margin: 0;
+    width: 100%;
+  }
+  .nav {
+    max-height: none;
+  }
+}
