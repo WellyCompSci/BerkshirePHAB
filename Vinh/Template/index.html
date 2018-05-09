@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, width=device-width">
+  <title>Berkshire PHAB Demo Page</title>
+  <link href='http://fonts.googleapis.com/css?family=Changa+One|Open+Sans:400italic,700italic,400,700,800' rel='stylesheet' type='text/css'>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    function DropDown() {
+      var x = document.getElementById("topnav");
+      if (x.className === "nav") {
+        x.className += " responsive";
+      } else {
+        x.className = "nav";
+      }
+    }
+    function myMap() {
+        var mapOptions = {
+            center: new google.maps.LatLng(51.5, -0.12),
+            zoom: 10,
+            mapTypeId: google.maps.MapTypeId.HYBRID
+        }
+    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    }
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+</head>
+
+<body>
+  <div class="background">
+    <div class="grid-container">
+      <div class="nav" id="topnav">
+        <img class="img" src="assets/images/berkshirephablogo.gif" alt="logo" onclick="DropDown()">
+        <div class="butts">
+          <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="DropDown()">&#9776;</a>
+          <a href="#Home">HOME</a>
+          <a href="#About Us">ABOUT US</a>
+          <a href="#Contact Us" class="active">CONTACT US</a>
+          <a href="#Join Us">JOIN US</a>
+        </div>
+      </div>
+      <div class="main">
+        <div class="container">
+          <div class="title">
+            <h1>Contact Us</h1>
+          </div>
+          <div class="body">
+            <!-- Edit Below Here -->
+            <div class="image-card" width="100%">
+              <img src="assets/images/contactbackground.jpg" style="width: 100%; height: auto;"/>
+              <div class="bgopacity">
+              </div>
+              <div class="imagetext">
+                <h2>Need any help?</h2>
+                <p>Get in touch with our team today and we'll help you resolve your issues.</p>
+                <div class="emailbutt">
+                <a href="#Email">EMAIL US</a>
+              </div>
+              </div>
+            </div>
+            <div class="general">
+              <a style="text-align: center;"><h3>Got a question?</h3></a>
+              <a><h4>How can I contact BerkshirePhab?</h4></a>
+              <a>You can contact us via our email or call us on 0118 916 8412.</a>
+              <a><h4>Can I donate by telephone?</h4></a>
+              <a>We gladly accept donations over the phone, just give us a call.</a>
+              <a><h4>Can my donation be refunded?</h4></a>
+              <a>Unforunately not, charity laws state that all donations are non-refundable.</a>
+              <a><h4></h4></a>
+              <a></a>
+              <div id="map" style="width:200px;height:200px;float:right;"></div>
+              <a><h4>What are your opening hours?</h4></a>
+              <table>
+                <tr>
+                  <th>Club</th>
+                  <th>Times</th>
+                  <th>Additional Information</th>
+                  <th>Cost</th>
+                </tr>
+                <tr>
+                  <td>Berkshire Phab Club</td>
+                  <td>Monday to Thursday: 10am to 4pm</td>
+                  <td>You must be aged 18 or over.</td>
+                  <td>£17 per day (part-day available), lunch: £3.50</td>
+                </tr>
+                <tr>
+                  <td>Berkshire Phab Youth Club</td>
+                  <td>Every Saturday: 9.30am to 1pm</td>
+                  <td>You must be between the ages of 5-18.</td>
+                  <td>£5 per day (Meal included)</td>
+                </tr>
+                <tr>
+                  <td>Reading Phab Club</td>
+                  <td>Wednesday Evenings: 7:00pm to 9:30pm</td>
+                  <td>You must be aged 16 or over.</td>
+                  <td>N/A</td>
+                </tr>
+              </table>
+            </div>
+            <!-- <div class="image-card" style="float: left; margin: 5px;">
+              <img src="assets/images/sensoryroom.jpg" style="width: 100%; height: auto;" />
+            </div> -->
+            <p>
+            </p>
+
+            <!-- Edit Above Here -->
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="footer-content">
+          <div class="email">
+            Email:<br><a href="mailto:info@berkshirephab.org">info@berkshirephab.org</a>
+          </div>
+
+          <div class="social">
+            <a class="social-image" href="https://www.facebook.com/BerkshirePhab"><i class="fab fa-facebook-square"></i><a>
+                        <a class="social-image" href="https://twitter.com/phab_charity"><i class="fab fa-twitter-square"></i>
+                        </a>
+          </div>
+
+          <div class="phone">
+            Phone Number:<br><a href="tel:0118 916 8412">0118 916 8412</a>&ensp;/&ensp;<a href="tel:0118 916 8413">0118 916 8413</a>
+          </div>
+          <div class="mobile">
+            <a href="mailto:info@berkshirephab.org"><i class="fas fa-envelope-square"></i></a>
+            <a href="https://www.facebook.com/BerkshirePhab"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://twitter.com/phab_charity"><i class="fab fa-twitter-square"></i></a>
+            <a href="tel:0118 916 8412"><i class="fas fa-phone-square"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
