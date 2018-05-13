@@ -222,10 +222,14 @@ height: 100%;
   color: #008000;
 }
 
-.nav a:hover {
+.nav a:hover:not(.donatebtn) {
   background-color: #ddd;
   text-decoration: none;
   color: black;
+}
+
+.donatebtn:hover {
+  background-color: #b52217;
 }
 
 .active {
@@ -264,7 +268,6 @@ height: 100%;
     width: 0;
     top: 0;
     right: 0;
-    overflow-x: hidden;
     transition: 0.5s;
     background-color: white;
     z-index: 1001;

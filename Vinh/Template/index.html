@@ -6,44 +6,16 @@
   <title>Berkshire PHAB Demo Page</title>
   <link href='http://fonts.googleapis.com/css?family=Changa+One|Open+Sans:400italic,700italic,400,700,800' rel='stylesheet' type='text/css'>
   <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-  <link rel="stylesheet" href="css/stylecontact.css">
+  <link rel="stylesheet" href="css/style.css">
   <script>
     function DropDown() {
-      var w = parseInt(window.innerWidth);
-      if (w <= 550) {
-        var x = document.getElementById("butts");
-        if (x.className === "butts") {
-          x.className += " responsive";
-        } else {
-          x.className = "butts";
-        }
+      var x = document.getElementById("topnav");
+      if (x.className === "nav") {
+        x.className += " responsive";
+      } else {
+        x.className = "nav";
       }
     }
-
-    function openNav() {
-      document.getElementById("butts").style.width = "250px";
-      document.getElementById("icon").style.marginRight = "250px";
-      document.getElementById("darken").style.display = "block";
-      var w = parseInt(window.innerWidth);
-    }
-
-    function closeNav() {
-      document.getElementById("butts").style.width = "";
-      document.getElementById("icon").style.marginRight = "0";
-      document.getElementById("darken").style.display = "none";
-    }
-
-
-    function autocloseNav(x) {
-      if (x.matches) {
-        document.getElementById("butts").style.width = "";
-        document.getElementById("icon").style.marginRight = "0";
-        document.getElementById("darken").style.display = "none";
-      }
-    }
-    var x = window.matchMedia("(min-width: 1200px)")
-    autocloseNav(x)
-    x.addListener(autocloseNav)
   </script>
 </head>
 
@@ -51,19 +23,14 @@
   <div class="background">
     <div class="grid-container">
       <div class="nav" id="topnav">
-        <a href="#Home"><img class = "img" id="img" src="assets/images/berkshirephablogo.gif" alt="logo" onclick="DropDown()"></a>
-        <a href="javascript:void(0);"><span style="font-size:15px;" class="icon" id="icon" onclick="openNav()">&#9776;</span></a>
-        <div class="butts" id="butts">
-          <a href="#Home" class="homebutt">HOME</a>
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-          <a href="#About">ABOUT</a>
-          <a href="#Event">EVENTS</a>
-          <a href="#Volunteer">VOLUNTEER</a>
-          <a href="#Contact">CONTACT</a>
-          <a href="#Donate" class="donatebtn">DONATE</a>
+        <img class="img" src="assets/images/berkshirephablogo.gif" alt="logo" onclick="DropDown()">
+        <div class="butts">
+          <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="DropDown()">&#9776;</a>
+          <a href="#Home">HOME</a>
+          <a href="#About Us">ABOUT US</a>
+          <a href="#Contact Us" class="active">CONTACT US</a>
+          <a href="#Join Us">JOIN US</a>
         </div>
-      </div>
-      <div id="darken">
       </div>
       <div class="main">
         <div class="container">
@@ -132,6 +99,12 @@
             <div class="panel">
               <p>The main Berkshire Phab Centre is located at:<br /><br />Berkshire Phab<br />The MAPP Centre,<br />22 Mount Pleasant,<br />Reading<br />RG1 2TD</p>
             </div>
+            <!-- <div class="image-card" style="float: left; margin: 5px;">
+              <img src="assets/images/sensoryroom.jpg" style="width: 100%; height: auto;" />
+            </div> -->
+            <p>
+            </p>
+
             <!-- Edit Above Here -->
           </div>
         </div>
@@ -161,20 +134,20 @@
       </div>
     </div>
   </div>
-  <script>
-  var acc = document.getElementsByClassName("accordion");
-  var i;
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
 
-  for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-      this.classList.toggle("activefaq");
-      var panel = this.nextElementSibling;
-      if (panel.style.maxHeight){
-        panel.style.maxHeight = null;
-      } else {
-        panel.style.maxHeight = panel.scrollHeight + "px";
-      }
-    });
-  }
-  </script>
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("activefaq");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
+</script>
 </body>
