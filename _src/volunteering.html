@@ -7,60 +7,22 @@
   <link href='http://fonts.googleapis.com/css?family=Changa+One|Open+Sans:400italic,700italic,400,700,800' rel='stylesheet' type='text/css'>
   <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
   <link rel="stylesheet" href="css/style.css">
-  <script>
-    function DropDown() {
-      var w = parseInt(window.innerWidth);
-      if (w <= 550) {
-        var x = document.getElementById("butts");
-        if (x.className === "butts") {
-          x.className += " responsive";
-        } else {
-          x.className = "butts";
-        }
-      }
-    }
-
-    function openNav() {
-      document.getElementById("butts").style.width = "250px";
-      document.getElementById("icon").style.marginRight = "250px";
-      document.getElementById("darken").style.display = "block";
-      var w = parseInt(window.innerWidth);
-    }
-
-    function closeNav() {
-      document.getElementById("butts").style.width = "";
-      document.getElementById("icon").style.marginRight = "0";
-      document.getElementById("darken").style.display = "none";
-    }
-
-
-    function autocloseNav(x) {
-      if (x.matches) {
-        document.getElementById("butts").style.width = "";
-        document.getElementById("icon").style.marginRight = "0";
-        document.getElementById("darken").style.display = "none";
-      }
-    }
-    var x = window.matchMedia("(min-width: 1200px)")
-    autocloseNav(x)
-    x.addListener(autocloseNav)
-  </script>
 </head>
 
 <body>
   <div class="background">
     <div class="grid-container">
       <div class="nav" id="topnav">
-        <a href="#Home"><img class = "img" id="img" src="assets/images/berkshirephablogo.gif" alt="logo" onclick="DropDown()"></a>
+        <a href="./"><img class = "img" id="img" src="assets/images/berkshirephablogo.gif" alt="logo" onclick="DropDown()"></a>
         <a href="javascript:void(0);"><span style="font-size:15px;" class="icon" id="icon" onclick="openNav()">&#9776;</span></a>
         <div class="butts" id="butts">
           <a href="./" class="homebutt">HOME</a>
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
           <a href="./about.html">ABOUT</a>
-          <a href="">EVENTS</a>
-          <a href="./volunteering.html">VOLUNTEER</a>
+          <a href="./events.html">EVENTS</a>
+          <a href="./volunteering.html" class="active">VOLUNTEER</a>
           <a href="./contact.html">CONTACT</a>
-          <a href="#Donate" class="donatebtn">DONATE</a>
+          <a href="https://www.paypal.com/uk/home" class="donatebtn">DONATE</a>
         </div>
       </div>
       <div id="darken">
@@ -122,5 +84,6 @@
       </div>
     </div>
   </div>
+  <script src="js/navbar.js"></script>
 
 </body>

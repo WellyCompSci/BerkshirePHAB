@@ -51,16 +51,16 @@
   <div class="background">
     <div class="grid-container">
       <div class="nav" id="topnav">
-        <a href="#Home"><img class = "img" id="img" src="assets/images/berkshirephablogo.gif" alt="logo" onclick="DropDown()"></a>
+        <a href="./"><img class = "img" id="img" src="assets/images/berkshirephablogo.gif" alt="logo" onclick="DropDown()"></a>
         <a href="javascript:void(0);"><span style="font-size:15px;" class="icon" id="icon" onclick="openNav()">&#9776;</span></a>
         <div class="butts" id="butts">
           <a href="./" class="homebutt">HOME</a>
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
           <a href="./about.html">ABOUT</a>
-          <a href="#About">EVENTS</a>
+          <a href="./events.html">EVENTS</a>
           <a href="./volunteering.html">VOLUNTEER</a>
-          <a href="./contact.html">CONTACT</a>
-          <a href="#Donate" class="donatebtn">DONATE</a>
+          <a href="./contact.html" class="active">CONTACT</a>
+          <a href="https://www.paypal.com/uk/home" class="donatebtn">DONATE</a>
         </div>
       </div>
       <div id="darken">
@@ -167,20 +167,5 @@
       </div>
     </div>
   </div>
-  <script>
-    var acc = document.getElementsByClassName("accordion");
-    var i;
-
-    for (i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function() {
-        this.classList.toggle("activefaq");
-        var panel = this.nextElementSibling;
-        if (panel.style.maxHeight) {
-          panel.style.maxHeight = null;
-        } else {
-          panel.style.maxHeight = panel.scrollHeight + "px";
-        }
-      });
-    }
-  </script>
+  <script src="js/navbar.js"></script>
 </body>
