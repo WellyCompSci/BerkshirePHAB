@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.OBmySlides {display: none;}
+img {
+  vertical-align: middle;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+.OBfit_top{
+  object-position: 50% 0;
+}
+
+
+
+/* Slideshow container */
+.OBslideshow-container {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  margin: auto;
+  display: inline-block;
+  float: left;
+}
+
+
+.OBbox{
+  padding: 5px;
+  width: 25%;
+  position: absolute;
+  left: 65%;
+  height: 100%;
+  background: rgba(69,185,60,0.7);
+}
+
+/* Caption text */
+.OBtext {
+  position: absolute;
+  color: White;
+  font-size: 1rem;
+  padding: 10px;
+  max-height: 100%;
+  vertical-align: middle;
+  width: 100%;
+  text-align: center;
+  margin-top: 150px
+}
+
+
+.OBdot {
+  height: 15px;
+  width: 15px;
+  margin: 15px 2px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+.OBdot:hover {
+  background-color: #999;
+}
+.OBdot_container{
+  height: 45px;
+  margin-top: -45px;
+  text-align: center;
+}
+
+.OBactive {
+  background-color: #717171;
+}
+
+
+ /*Fading animation*/
+.OBfade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2s;
+  /*animation-name: fade1;
+  animation-duration: 2.5s;*/
+}
+.OBfade1 {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2s;
+  /*animation-name: fade1;
+  animation-duration: 2.5s;*/
+}
+
+/*@-webkit-keyframes fade1{
+  from {opacity: 1}
+  to {opacity: .4}
+}*/
+
+@keyframes OBfade {
+  from {opacity: 1}
+  to {opacity: 1}
+}
+
+@keyframes OBfade1 {
+  from {opacity: 1}
+  to {opacity: .4}
+}
+
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .OBtext {font-size: 11px; margin-top: 0px}
+}
+
+
+@media only screen and (max-width: 700px) {
+  .OBtext {font-size: 22.5px; margin-top: 0px}
+  .OBdot {height: 0px; width: 0px}
+}
+@media only screen and (max-width: 768px) {
+  .OBtext {font-size: 1rem; ; margin-top: 0px}
+  .OBdot {height: 0px; width: 0px}
+  [class*="OBbox"]{
+    left: 0%;
+    width: 100%;
+    height: 200px;
+    top: 100%;
+  }
+  [class*="OBslideshow-container"]{
+  height: 300px;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="OBslideshow-container">
+<div class="OBmySlides fade">
+  <!--<div class="numbertext">1 / 3</div>!-->
+  <div class="OBbox"; align="right">
+    <div class="OBtext">Phab inspires and supports children, young people and adults with and without disabilities to make more of life together.</div>
+  </div>
+  <img src= "https://scontent-lhr3-1.xx.fbcdn.net/v/t1.0-9/22552627_1501099423273326_1476803192730769513_n.jpg?oh=312de19f049e8f181c425d218a2132a5&oe=5B2BE4FC" style="width:100%; height:500px">
+
+</div>
+
+<div class="OBmySlides fade">
+<!--  <div class="numbertext">2 / 3</div>!-->
+  <div class="OBbox"; align="right">
+    <div class="OBtext">Over 150 Phab Clubs across England and Wales, with 8,000 members, enable children, young people and adults with disabilities to get together with friends and family for all kinds of activities and social events. </div>
+  </div>
+  <img class="OBfit_top" src="https://scontent-lhr3-1.xx.fbcdn.net/v/t31.0-8/25398119_1558302924219642_4884639462709443444_o.jpg?oh=a7e880c5d76626eea708975d26fb05b5&oe=5B2FC514" style="width:100%; height:500px">
+
+</div>
+
+<div class="OBmySlides fade">
+  <!--<div class="numbertext">3 / 3</div>!-->
+  <div class="OBbox"; align="right">
+    <div class="OBtext">Run by local volunteers, Phab Clubs can make a real difference to the lives of people with disabilities and their families too. </div>
+  </div>
+  <img src="https://scontent-lhr3-1.xx.fbcdn.net/v/t31.0-8/19667512_1411780955538507_4700109208342251672_o.jpg?_nc_cat=0&oh=afbf237b36829dbdfde8d7efbc881cec&oe=5B3584FF" style="width:100%; height:500px">
+
+
+</div>
+<div class="OBdot_container">
+  <span class="OBdot" onclick="currentSlide(1)"></span>
+  <span class="OBdot" onclick="currentSlide(2)"></span>
+  <span class="OBdot" onclick="currentSlide(3)"></span>
+</div>
+</div>
+
+<!-- <div class="feed-container">
+</div>  !-->
+
+
+<script>
+var slideIndex = 1;
+plusSlides(0);
+var x;
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+  x = setTimeout(plusSlides, 5000, 1);
+}
+
+function currentSlide(n) {
+  clearTimeout(x)
+  showSlides(slideIndex = n);
+  x = setTimeout(plusSlides, 5000, 1);
+}
+
+function changeImage()
+{
+document.getElementById("img").src=images[x]
+x++;
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("OBmySlides");
+  var dots = document.getElementsByClassName("OBdot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" OBactive", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " OBactive";
+}
+</script>
+</body>
+</html>
