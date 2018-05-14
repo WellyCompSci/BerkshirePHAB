@@ -537,7 +537,7 @@ img {vertical-align: middle;}
   text-align: center;
 }
 
-.active {
+.slideshow-container .active {
   background-color: #717171;
 }
 
