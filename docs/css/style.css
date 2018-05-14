@@ -237,7 +237,7 @@ height: 100vh;
   color: black;
 }
 
-.active {
+.nav .active {
   background-color: white;
 }
 
