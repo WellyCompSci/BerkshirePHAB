@@ -22,6 +22,9 @@ $(function() {
       $("#app").removeAttr("style");
       $("#app *").removeAttr("style");
       $(".title h1").text(response.title);
+      $("#app img").each(function(){
+        $(this).wrap('<div class="image-card-unfixed" style="max-width: ' + (parseInt($(this).attr("width")) + 20) +'px"></div>');
+      })
     }
   });
 });
