@@ -54,10 +54,6 @@ body{
   margin: 20px auto 20px auto;
 }
 
-table, th, td {
-    border: 1px solid black;
-}
-
 .accordion {
     background-color: #eee;
     color: #006600;
@@ -259,7 +255,7 @@ height: 100vh;
 
 .donatebtn {
   color: white;
-  background-color: #da291c;
+  background-color: #da291c !important;
 }
 
 #darken {
@@ -274,19 +270,18 @@ height: 100vh;
 }
 @media screen and (max-width: 1200px) {
   .container{
-    grid-template-columns: 15% 60% 25%;
+    grid-template-columns: auto 65% auto;
   }
-  .butts.responsive {position: relative; }
+  .butts.responsive {position: relative;}
   .butts:not(.closebtn) {
     position: fixed;
     height: 100%;
     width: 0;
     top: 0;
     right: 0;
-    overflow-x: hidden;
     transition: 0.5s;
-    background-color: white;
     z-index: 1001;
+    background-color: white;
   }
   .closebtn {
     display: block;
@@ -322,6 +317,7 @@ height: 100vh;
     padding: 0;
     border-bottom: 1px solid #444;
     border-bottom-width: thin;
+    background-color: white;
   }
   .closebtn {
     text-decoration: none;
@@ -336,17 +332,22 @@ height: 100vh;
     border-bottom: 1px solid #444;
     border-bottom-width: thin;
   }
-  .donate {
-    color: white;
-  }
 }
 
 @media screen and (max-width: 700px) {
+  .container{
+    grid-template-columns: auto 80% auto;
+  }
   .icon {
     float: right;
+    z-index: 10;
   }
   .butts {
     width: 100%;
+  }
+  .donatebtn {
+    color: white;
+    background-color: #da291c;
   }
 }
 
@@ -354,7 +355,7 @@ height: 100vh;
   .butts:not(.closebtn) {
     display: none;
     width: 100%;
-    position: static;
+    position: relative;
   }
   .butts.responsive:not(.closebtn) {
     display: inline-block !important;
@@ -363,30 +364,16 @@ height: 100vh;
     left: 0;
     right: 0;
     padding: 0;
-    float: left;
-    z-index: 10;
+    margin: 0;
+    z-index: 100;
     border-top: 1px solid #444;
-  }
-  .img {
-    width: 100%;
-    height: auto;
-    position: static;
-  }
-  .icon {
-    display: none;
   }
   .closebtn {
     display: none;
   }
-  .homebutt {
-    display: block !important;
-  }
   .butts {
     margin: 0;
     width: 100%;
-  }
-  .nav {
-    max-height: none;
   }
 }
 /* FOOTER */
@@ -606,6 +593,11 @@ img {vertical-align: middle;}
     grid-auto-flow: dense;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     grid-auto-rows: minmax(auto, 360px);
+}
+.upcoming-app{
+  display: grid;
+  grid-auto-flow: dense;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
 }
 .card img{
   width: 100%;

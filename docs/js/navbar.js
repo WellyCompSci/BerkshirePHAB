@@ -1,5 +1,10 @@
 function DropDown() {
   var w = parseInt(window.innerWidth);
+
+}
+
+function openNav() {
+  var w = parseInt(window.innerWidth);
   if (w <= 550) {
     var x = document.getElementById("butts");
     if (x.className === "butts") {
@@ -8,13 +13,11 @@ function DropDown() {
       x.className = "butts";
     }
   }
-}
-
-function openNav() {
-  document.getElementById("butts").style.width = "250px";
-  document.getElementById("icon").style.marginRight = "250px";
-  document.getElementById("darken").style.display = "block";
-  var w = parseInt(window.innerWidth);
+  else{
+    document.getElementById("butts").style.width = "250px";
+    document.getElementById("icon").style.marginRight = "250px";
+    document.getElementById("darken").style.display = "block";
+  }
 }
 
 function closeNav() {
