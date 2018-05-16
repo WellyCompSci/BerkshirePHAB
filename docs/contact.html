@@ -7,44 +7,6 @@
   <link href='http://fonts.googleapis.com/css?family=Changa+One|Open+Sans:400italic,700italic,400,700,800' rel='stylesheet' type='text/css'>
   <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
   <link rel="stylesheet" href="css/style.css">
-  <script>
-    function DropDown() {
-      var w = parseInt(window.innerWidth);
-      if (w <= 550) {
-        var x = document.getElementById("butts");
-        if (x.className === "butts") {
-          x.className += " responsive";
-        } else {
-          x.className = "butts";
-        }
-      }
-    }
-
-    function openNav() {
-      document.getElementById("butts").style.width = "250px";
-      document.getElementById("icon").style.marginRight = "250px";
-      document.getElementById("darken").style.display = "block";
-      var w = parseInt(window.innerWidth);
-    }
-
-    function closeNav() {
-      document.getElementById("butts").style.width = "";
-      document.getElementById("icon").style.marginRight = "0";
-      document.getElementById("darken").style.display = "none";
-    }
-
-
-    function autocloseNav(x) {
-      if (x.matches) {
-        document.getElementById("butts").style.width = "";
-        document.getElementById("icon").style.marginRight = "0";
-        document.getElementById("darken").style.display = "none";
-      }
-    }
-    var x = window.matchMedia("(min-width: 1200px)")
-    autocloseNav(x)
-    x.addListener(autocloseNav)
-  </script>
 </head>
 
 <body>

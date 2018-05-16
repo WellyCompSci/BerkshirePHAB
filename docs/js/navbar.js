@@ -34,6 +34,7 @@ function autocloseNav(x) {
     document.getElementById("darken").style.display = "none";
   }
 }
+$(".icon").css("line-height", $(".img").css("height"));
 var x = window.matchMedia("(min-width: 1200px)");
 autocloseNav(x);
 x.addListener(autocloseNav);
