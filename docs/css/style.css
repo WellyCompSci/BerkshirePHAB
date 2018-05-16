@@ -117,7 +117,7 @@ body {
     grid-template-rows: 84.8px auto 80px;
 
     grid-template-areas: 'header header header header header header' '. main main main main .' 'footer footer footer footer footer footer';
-    grid-gap: 3vw;
+    row-gap: 3vw;
     height: 100vh;
 }
 
@@ -352,8 +352,6 @@ body {
     .container {
         grid-template-columns: auto 80% auto;
     }
-
-
 
     .butts {
         width: 100vw;
