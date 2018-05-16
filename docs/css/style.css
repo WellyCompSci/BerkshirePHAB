@@ -114,12 +114,11 @@ body {
 
 .grid-container {
     display: grid;
-    grid-template-rows: minmax(max-content, 84.8px) auto minmax(max-content, 80px);
+    grid-template-rows: 84.8px auto 80px;
 
     grid-template-areas: 'header header header header header header' '. main main main main .' 'footer footer footer footer footer footer';
     grid-gap: 3vw;
     height: 100vh;
-    width: 100vw;
 }
 
 .background {
@@ -200,8 +199,8 @@ body {
 .nav {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     background-color: #44B83B;
-    width: 100vw;
     height: auto;
+    width: auto;
     display: inline-block;
     float: left;
     position: relative;
@@ -216,6 +215,7 @@ body {
     max-height: 84.8px;
     display: inline-block;
     float: left;
+    width: auto;
 }
 
 .butts {
@@ -256,7 +256,7 @@ body {
 
 .icon {
     display: none;
-    width: 103.7px;
+    padding: 0 40px;
 }
 
 .donatebtn {
@@ -302,12 +302,12 @@ body {
     }
 
     .icon {
-        display: block;
+        display: inline-block;
         float: right;
         max-height: 100%;
         text-align: center;
-        transition: margin-right 0.5s;
         color: white;
+        line-height: 84.8px;
         font-size: 30px;
     }
 
@@ -352,17 +352,8 @@ body {
     .container {
         grid-template-columns: auto 80% auto;
     }
-    .img{
-        width: 75vw;
-        height: auto;
-        float: left;
-    }
 
-    .icon {
-        float: right;
-        width: 25vw;
-        z-index: 10;
-    }
+
 
     .butts {
         width: 100vw;
@@ -402,7 +393,18 @@ body {
         width: 100%;
     }
 }
-
+@media screen and (max-width: 455px){
+    .img {
+        width: 75vw;
+        height: 84.8px;
+    }
+    .icon {
+        line-height: 84.8px;
+        width: 25vw;
+        z-index: 10;
+        float: none;
+    }
+}
 /* FOOTER */
 .footer {
     height: 80px;
