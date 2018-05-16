@@ -6,7 +6,7 @@ body {
     font-family: sans-serif;
     margin: 0;
     padding: 0;
-    height: 100%;
+    height: 100vh;
     transition: background-color .5s;
 }
 
@@ -117,7 +117,7 @@ body {
     grid-template-rows: minmax(max-content, 84.8px) auto minmax(max-content, 80px);
 
     grid-template-areas: 'header header header header header header' '. main main main main .' 'footer footer footer footer footer footer';
-    grid-gap: 30px;
+    grid-gap: 3vw;
     height: 100vh;
     width: 100vw;
 }
@@ -144,7 +144,7 @@ body {
     display: grid;
     grid-template-rows: 23px minmax(23px, max-content) auto;
     grid-template-columns: minmax(min-content, 15%) minmax(40%, max-content) auto;
-    grid-gap: 10px;
+    grid-gap: 1vw;
     margin-bottom: 10px;
 }
 
@@ -205,7 +205,6 @@ body {
     display: inline-block;
     float: left;
     position: relative;
-    max-height: 84.8px;
     grid-area: header;
 }
 
@@ -214,7 +213,7 @@ body {
 }
 
 .img {
-    height: 100%;
+    max-height: 84.8px;
     display: inline-block;
     float: left;
 }
@@ -604,14 +603,12 @@ body {
 @media only screen and (max-width: 768px) {
     .OBtext {font-size: 1rem; ; margin-top: 0px}
     .OBdot {height: 0px; width: 0px}
-    [class*="OBbox"]{
-        left: 0%;
+    .OBbox{
+        left: 0;
+        right: 0;
         width: 100%;
-        height: 200px;
-        top: 100%;
-    }
-    [class*="OBslideshow-container"]{
-        height: 300px;
+        bottom: 0;
+        height: 150px;
     }
 }
 .card {
