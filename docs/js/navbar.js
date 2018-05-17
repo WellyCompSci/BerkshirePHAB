@@ -41,6 +41,21 @@ x.addListener(autocloseNav);
 var acc = document.getElementsByClassName("accordion");
 var i;
 
+$(".accordion").each(function(){
+  $(this).on("click", function(){
+      if(parseInt($(this).next(".panel").css("max-height")) > 0){
+          $(this).removeClass("activefaq");
+          $(this).next(".panel").css("max-height", 0);
+      }
+      else{
+          $(".panel").css("max-height", 0);
+          $(".accordion").removeClass("activefaq");
+          $(this).addClass("activefaq")
+          $(this).next(".panel").css("max-height", $(this).next(".panel")[0].scrollHeight);
+      }
+  });
+});
+/*
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
     this.classList.toggle("activefaq");
@@ -51,4 +66,4 @@ for (i = 0; i < acc.length; i++) {
       panel.style.maxHeight = panel.scrollHeight + "px";
     }
   });
-}
+}*/

@@ -9,18 +9,19 @@ function loadCalendarApi() {
   gapi.client.load('calendar', 'v3', listUpcomingEvents);
 }
 
-function display_events(event_discription, time, date, event_title){
-  var p1 = '<div class="upcoming-card">'
-  var p2 = '<div class="upcoming-header">'
-  var p3 = '<h1>'
-  var p4 = '<p>'
-  var p5 = '<div class="upcoming-container">'
-  var p6 = '<div class="upcoming-gallery">'
-  var p_1 = '</div>'
-  var p_3 = '</h1>'
-  var p_4 = '</p>'
-  var text_2 = ''
-  text_2 = p6 + p1 + p2 + p3 + event_title + "<br>" + event_discription + p_3 + p_1 + p5 + p4 + date + '<br>' + time + p_4 + p_1 + p_1 + p_1
+function display_events(event_description, time, date, event_title){
+  var p1 = '<div class="upcoming-card">';
+  var p2 = '<div class="upcoming-header">';
+  var p3 = '<h1>';
+  var p4 = '<p>';
+  var p5 = '<div class="upcoming-container">';
+  var p6 = '<div class="upcoming-gallery">';
+  var p_1 = '</div>';
+  var p_3 = '</h1>';
+  var p_4 = '</p>';
+  var text_2 = '';
+  event_description = event_description ? event_description : ""
+  text_2 = p6 + p1 + p2 + p3 + event_title + "<br>" + event_description + p_3 + p_1 + p5 + p4 + date + '<br>' + time + p_4 + p_1 + p_1 + p_1
 
   return text_2
 }

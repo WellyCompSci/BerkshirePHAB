@@ -110,6 +110,27 @@ body {
     height: auto;
 }
 
+.formbutt{
+  margin-top: 0px;
+  position: relative;
+  max-width: 100%;
+
+}
+.formbutt a {
+  text-decoration: none;
+  background-color: white;
+  color: #DA291C;
+  border: 1px, solid: #DA291C;
+  border-radius: 4px;
+  font-size: 1.75vw;
+  font-weight: bold;
+  padding: 10px;
+  width: 20%;
+}
+.formbutt a:hover{
+  color: white;
+  background-color: red;
+}
 /* Custom CSS End */
 
 .grid-container {
@@ -124,10 +145,10 @@ body {
 .background {
     background: url("../assets/images/background.png");
     /* Full height */
-    height: 100%;
+    height: 100vh;
 
     /* Center and scale the image nicely */
-    background-position: cover;
+    background-position: center;
     background-repeat: repeat;
     background-size: contain;
 }
