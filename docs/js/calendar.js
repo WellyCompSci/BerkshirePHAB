@@ -67,9 +67,8 @@ function display_events(event_description, time, date, event_title){
            time = start + " to " + end;
          }
          date = new Date(date)
-         console.log(String(date));
          date = date.toDateString();
-         text += row_op + column_op + '<h1>' + title + '</h1>' + '<h2>' + summary_event + '</h2>' + column_cl + column_op + time + column_cl + column_op + date + column_cl + row_cl;
+         text += row_op + column_op + '<h1>' + title + '</h1>' + '<h2>' + (summary_event || "") + '</h2>' + column_cl + column_op + time + column_cl + column_op + date + column_cl + row_cl;
          text_2 += display_events(summary_event, time, date, title)
        }
        $("#upcoming-loader").hide();
