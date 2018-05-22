@@ -7,7 +7,6 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    width: 100vw;
     transition: background-color .5s;
 }
 
@@ -142,7 +141,6 @@ body {
     grid-template-areas: 'header header header header header header' '. main main main main .' 'footer footer footer footer footer footer';
     row-gap: 3vw;
     height: 100vh;
-    width: 100vw;
 }
 
 .background {
@@ -167,7 +165,9 @@ body {
 .container {
     display: -ms-grid;
     display: grid;
+    grid-template-rows: 23px minmax(23px, -webkit-max-content) auto;
     grid-template-rows: 23px minmax(23px, max-content) auto;
+    grid-template-columns: minmax(-webkit-min-content, 15%) minmax(40%, -webkit-max-content) auto;
     grid-template-columns: minmax(min-content, 15%) minmax(40%, max-content) auto;
     -ms-grid-rows: 23px minmax(23px, max-content) auto;
     -ms-grid-columns: minmax(min-content, 15%) minmax(40%, max-content) auto;
@@ -388,6 +388,7 @@ body {
 }
 @media screen and (min-width: 1920px){
   .container{
+    grid-template-rows: 15px minmax(15px, -webkit-max-content) auto;
     grid-template-rows: 15px minmax(15px, max-content) auto;
     -ms-grid-rows: 15px minmax(15px, max-content) auto;
 
