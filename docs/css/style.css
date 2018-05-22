@@ -253,6 +253,7 @@ body {
     display: inline-block;
     float: left;
     width: auto;
+    content: url("../assets/images/berkshirephablogo.gif");
 }
 
 .butts {
@@ -438,14 +439,15 @@ body {
 }
 @media screen and (max-width: 455px){
     .img {
-        width: 75vw;
+        width: auto;
         height: 84.8px;
+        content: url("../assets/images/berkshirephabsmalllogo.gif");
     }
     .icon {
         line-height: 84.8px;
         width: 25vw;
         z-index: 10;
-        float: none;
+        float: right;
     }
 }
 /* FOOTER */
