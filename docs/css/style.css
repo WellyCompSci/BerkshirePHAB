@@ -174,7 +174,7 @@ body {
     -ms-grid-rows: 23px minmax(23px, max-content) auto;
     -ms-grid-columns: minmax(min-content, 15%) minmax(40%, max-content) auto;
     grid-gap: 1vw;
-    margin-bottom: 10px;
+    margin: 10px 0;
 }
 
 .container .title {
@@ -403,12 +403,18 @@ body {
     .container {
         grid-template-columns: auto 80% auto;
     }
+    .emailbutt {
+        margin-top: 35px;
+    }
 
     .butts {
         width: 100vw;
     }
     .imagetext{
       transform: none;
+    }
+    .imagetext p{
+      display: none;
     }
 
     .donatebtn {
