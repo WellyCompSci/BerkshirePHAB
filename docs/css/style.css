@@ -328,6 +328,7 @@ body {
     .butts:not(.closebtn) {
         position: fixed;
         height: 100%;
+        overflow-y: auto;
         width: 0;
         top: 0;
         right: 0;
