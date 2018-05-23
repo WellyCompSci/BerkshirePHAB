@@ -415,6 +415,9 @@ body {
         color: white;
         background-color: #da291c;
     }
+    .image-card{
+      max-width: 100%;
+    }
 }
 
 @media screen and (max-width: 550px) {
