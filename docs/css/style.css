@@ -406,6 +406,7 @@ body {
 
     .butts {
         width: 100vw;
+        overflow-y: visible;
     }
     .imagetext{
       transform: none;
