@@ -328,8 +328,12 @@ body {
     .butts:not(.closebtn) {
         position: fixed;
         height: 100%;
+<<<<<<< HEAD
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
+=======
+        overflow-y: scroll;
+>>>>>>> 13aa667e27067136ba6360c998da8a2d347cdfea
         width: 0;
         top: 0;
         right: 0;
