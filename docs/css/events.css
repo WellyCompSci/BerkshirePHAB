@@ -26,7 +26,7 @@
   color: black;
   height: 40px;
   text-transform: capitalize;
-  font-size: 3.5vw;
+  font-size: 3vw;
 }
 
 #upcoming-table td:nth-child(3n+1), #upcoming-table th:nth-child(3n+1) {
