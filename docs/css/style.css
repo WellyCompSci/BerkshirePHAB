@@ -813,7 +813,8 @@ text-align: center;
   .image-overlay img{
     opacity: 0.3;
   }
-  .image-overlay{
+  .image-overlay-container{
     flex-wrap: wrap;
+    height: 500px;
   }
 }
