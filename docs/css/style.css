@@ -748,7 +748,7 @@ body {
   overflow: hidden;
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 
 .image-overlay{
@@ -790,6 +790,7 @@ text-align: center;
   background-color: white;
   transition: 0.5s ease;
   cursor:pointer;
+  text-align: center;
 }
 .btn:hover{
   background-color: red;
@@ -804,4 +805,12 @@ text-align: center;
 }
 .round-btn:hover{
   cursor: pointer;
+}
+@media only screen and (max-width: 768px){
+  .overlay{
+    opacity: 1;
+  }
+  .image-overlay img{
+    opacity: 0.3;
+  }
 }
