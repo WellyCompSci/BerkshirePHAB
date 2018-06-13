@@ -31,9 +31,29 @@
       <div id="darken">
       </div>
       <div class="main">
-        <div class="container">
+        <div class="container" id="opening">
           <div class="title">
-            <h1>Volunteering</h1>
+            <h1>Oppurtunities</h1>
+          </div>
+          <div class="body">
+            <div class="image-overlay-container">
+              <div class="image-overlay">
+                <img src="https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/15170862_1178004208916184_5833223618765078182_n.jpg?_nc_cat=0&oh=d442fc2a94844d3bab9ca7f25dfa3f9a&oe=5B7654DC" />
+                <div class="overlay">
+                  <a class="btn" onclick="$('#volunteering').show();$('#employers').hide();$('#opening').hide();">Volunteering</a>
+                </div>
+              </div>
+              <div class="image-overlay">
+                <img src="https://scontent-lht6-1.xx.fbcdn.net/v/t31.0-8/23592263_1531094886940446_2933083281144510972_o.jpg?_nc_cat=0&oh=4db8d610a6f8beaedc2affda13da067b&oe=5BA96BB9" />
+                <div class="overlay">
+                  <a class="btn" onclick="$('#employers').show();$('#volunteering').hide();$('#opening').hide();">Employers and Colleges</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container" id="volunteering" style="display: none;">
+          <div class="title">
+            <h1><a class="round-btn" style="padding: 8px 16px; border-radius: 50%;display: inline-block;" onclick="$('#volunteering').hide();$('#employers').hide();$('#opening').show();">&#8249;</a>Volunteering</h1>
           </div>
           <div class="body">
             <!-- Edit Below Here -->
@@ -70,9 +90,9 @@
             <!-- Edit Above Here -->
           </div>
         </div>
-        <div class="container">
+        <div class="container" id="employers" style="display: none;">
           <div class="title">
-            <h1>Employers and Colleges</h1>
+            <h1><a class="round-btn" style="padding: 8px 16px; border-radius: 50%;display: inline-block;" onclick="$('#volunteering').hide();$('#employers').hide();$('#opening').show();">&#8249;</a>Employers and Colleges</h1>
           </div>
           <div class="body">
             <!-- Edit Below Here -->
@@ -115,5 +135,8 @@
     </div>
   </div>
   <script src="js/navbar.js"></script>
-
+  <script>
+    $("#employers").hide();
+    $("#volunteering").hide();
+  </script>
 </body>
