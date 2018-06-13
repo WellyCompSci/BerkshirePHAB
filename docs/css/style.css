@@ -748,7 +748,7 @@ body {
   overflow: hidden;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .image-overlay{
@@ -812,5 +812,8 @@ text-align: center;
   }
   .image-overlay img{
     opacity: 0.3;
+  }
+  .image-overlay{
+    flex-wrap: wrap;
   }
 }
