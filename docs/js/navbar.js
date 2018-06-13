@@ -55,6 +55,7 @@ $(".accordion").each(function(){
       }
   });
 });
+
 /*
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
