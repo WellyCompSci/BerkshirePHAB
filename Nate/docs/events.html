@@ -7,7 +7,9 @@
   <link href='http://fonts.googleapis.com/css?family=Changa+One|Open+Sans:400italic,700italic,400,700,800' rel='stylesheet' type='text/css'>
   <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/events.css" />
   <meta name="theme-color" content="#44B83B" />
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
@@ -22,8 +24,8 @@
         <div class="butts" id="butts">
           <a href="./" class="homebutt">HOME</a>
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-          <a href="./about.html" class="active">ABOUT</a>
-          <a href="./events.html">EVENTS</a>
+          <a href="./about.html">ABOUT</a>
+          <a href="./events.html" class="active">EVENTS</a>
           <a href="./opportunities.html">OPPORTUNITIES</a>
           <a href="./contact.html">CONTACT</a>
           <a href="https://mydonate.bt.com/charities/berkshirephab" class="donatebtn">DONATE</a>
@@ -34,26 +36,29 @@
       <div class="main">
         <div class="container">
           <div class="title">
-            <h1>About Us</h1>
+            <h1>Upcoming Events</h1>
           </div>
           <div class="body">
-            <div class="text-content">
-              <!-- Edit Below Here -->
-              <div class="image-card" style="float: right; margin: 5px;">
-                <img src="assets/images/guidePhab.jpg" style="width: 100%; height: auto;" />
-              </div>
-              <p>Berkshire Phab is a charity that helps disabled and non-disabled people share experiences, socialise and enjoy activities designed for all abilities. We are open four days a week as a drop-in club for adults, and on Saturdays for children
-                and young people in our youth club. We run occasional outings, and offer a cooked lunch at our weekday club. Berkshire Phab has been in the Reading area for over 40 years and is based in a purpose-built community centre with full disabled
-                access at 22 Mount Pleasant, off Silver street, close to the centre of Reading. We are part of a nationwide network of clubs supported by Phab UK.
-              </p>
-              <div class="image-card" style="float: left; margin: 5px;">
-                <img src="assets/images/phablogo.gif" style="width: 100%; height: auto;" />
-              </div>
-              <p>
-                Like all Phab clubs, our aim is to promote and encourage opportunities where disabled and non-disabled people can share experiences on an equal basis, working towards an inclusive society. For details of other clubs, visit <a href="www.phab.org.uk">www.phab.org.uk</a></p>
+            <!-- Edit Below Here -->
+            <div class="loader" id="upcoming-loader"></div>
+            <section>
+              <table id="upcoming-table">
+              </table>
+            </section>
 
-              <!-- Edit Above Here -->
-            </div>
+            <!-- Edit Above Here -->
+          </div>
+        </div>
+        <div class="container">
+          <div class="title">
+            <h1>Past Events</h1>
+          </div>
+          <div class="body">
+            <!-- Edit Below Here -->
+            <div class="loader" id="events-loader"></div>
+            <div class="app" id="events"></div>
+
+            <!-- Edit Above Here -->
           </div>
         </div>
       </div>
@@ -82,5 +87,11 @@
       </div>
     </div>
   </div>
+  <script src="js/calendar.js">
+  </script>
+  <script src="https://apis.google.com/js/client.js?onload=loadCalendarApi">
+  </script>
   <script src="js/navbar.js"></script>
+  <script src="js/events.js"></script>
+
 </body>

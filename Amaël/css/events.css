@@ -68,11 +68,10 @@
   width: 100%;
   text-align: center;
   overflow: auto;
-  background-color: white;
 }
 
 .upcoming-header {
-  background-color: #4CAF50;
+  background-color: green;
   color: white;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -94,7 +93,6 @@
 .upcoming-gallery {
   padding: auto;
   margin: 1%;
-  margin-top: 4%;
   border-radius: 15px;
   border: 1px solid #ccc;
   display: inline-block;
