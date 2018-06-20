@@ -70,6 +70,7 @@
 
 .upcoming-card {
   width: 100%;
+  height: 100%;
   text-align: center;
   overflow: auto;
   background-color: white;
@@ -83,7 +84,7 @@
   padding-left: 3px;
   padding-right: 3px;
   font-size: 10px;
-  /* height: 190px; */
+  height: 67%;
 }
 
 .upcoming-header h1 {
