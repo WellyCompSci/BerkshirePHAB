@@ -210,6 +210,7 @@ body {
   -ms-grid-row: 2;
   -ms-grid-row-span: 2;
   padding: 20px;
+  padding-top: 25px;
   z-index: 5;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   background-color: #4CAF50;
