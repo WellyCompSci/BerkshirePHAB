@@ -106,6 +106,15 @@
             <!-- Edit Above Here -->
           </div>
         </div>
+        <div class="container">
+          <div class="title">
+            <h1>Map</h1>
+          </div>
+          <div class="body">
+            <div id="map" class="mapy">
+            </div>
+          </div>
+
       </div>
       <div class="footer">
         <div class="footer-content">
@@ -133,4 +142,16 @@
     </div>
   </div>
   <script src="js/navbar.js"></script>
+  <script>
+  function myMap() {
+    var myCenter = new google.maps.LatLng(51.455886,-0.969849);
+    var mapCanvas = document.getElementById("map");
+    var mapOptions = {center: myCenter, zoom: 13};
+    var map = new google.maps.Map(mapCanvas, mapOptions);
+    var marker = new google.maps.Marker({position:myCenter});
+    marker.setMap(map);
+  }
+  </script>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBM1J7SifXYWug5civN-aI3O2cU5EX_f_Y&callback=myMap"></script>
 </body>

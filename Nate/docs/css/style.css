@@ -805,3 +805,9 @@ text-align: center;
 .round-btn:hover{
   cursor: pointer;
 }
+
+.container .body .mapy{
+  margin-top: 20px;
+  width: 100%;
+  height: 500px;
+}
