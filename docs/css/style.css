@@ -195,7 +195,7 @@ body {
 
 .container .title h1 {
   text-align: center;
-  margin: 0;
+  margin: auto;
   padding: 5px;
   height: 100%;
 }
