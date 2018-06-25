@@ -96,6 +96,7 @@
               <button class="accordion">Where is your centre located?</button>
               <div class="panel">
                 <p>The main Berkshire Phab Centre is located at:<br /><br />Berkshire Phab<br />The MAPP Centre,<br />22 Mount Pleasant,<br />Reading<br />RG1 2TD</p>
+                <div id="map" class="mapy"></div>
               </div>
               <!-- <div class="image-card" style="float: left; margin: 5px;">
               <img src="assets/images/sensoryroom.jpg" style="width: 100%; height: auto;" />
@@ -106,6 +107,25 @@
             <!-- Edit Above Here -->
           </div>
         </div>
+        <div class="container">
+          <div class="title">
+            <h1>Policies</h1>
+          </div>
+          <div class="body">
+            <div class="document-list">
+              <a download href="assets/documents/policies/Complaints%20Policy%20&%20Procedure.doc">Complaints</a>
+              <a download href="assets/documents/policies/Confidentiality%20Policy.doc">Confidentiality</a>
+              <a download href="assets/documents/policies/Data%20protection%20policy.doc">Data Protection</a>
+              <a download href="assets/documents/policies/Health%20&%20Safety%20Policy.doc">Health & Safety</a>
+              <a download href="assets/documents/policies/New%20Phab's%20Mobile%20Phone%20and%20Camera%20Policy.docx">Mobile Phone & Camera</a>
+              <a download href="assets/documents/policies/Safeguarding%20Vulnerable%20Adults%20Policy.doc">Safeguarding</a>
+              <a download href="assets/documents/policies/Volunteer%20Policy.doc">Volunteer</a>
+              <a download href="assets/documents/policies/Volunteer%20Problem%20Solving%20Procedure.doc">Volunteer Problem Solving</a>
+              <a download href="assets/documents/policies/Whistleblowing%20policy.doc">Whistleblowing</a>
+            </div>
+          </div>
+        </div>
+
       </div>
       <div class="footer">
         <div class="footer-content">
@@ -132,5 +152,22 @@
       </div>
     </div>
   </div>
+  <script>
+    function myMap() {
+      var myCenter = new google.maps.LatLng(51.455886, -0.969849);
+      var mapCanvas = document.getElementById("map");
+      var mapOptions = {
+        center: myCenter,
+        zoom: 13
+      };
+      var map = new google.maps.Map(mapCanvas, mapOptions);
+      var marker = new google.maps.Marker({
+        position: myCenter
+      });
+      marker.setMap(map);
+    }
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBM1J7SifXYWug5civN-aI3O2cU5EX_f_Y&callback=myMap"></script>
+
   <script src="js/navbar.js"></script>
 </body>
