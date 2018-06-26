@@ -125,7 +125,7 @@ body {
   text-decoration: none;
   background-color: white;
   color: #DA291C;
-  border: 1px, solid: #DA291C;
+  border: 1px solid: #DA291C;
   border-radius: 4px;
   font-size: 1rem;
   font-weight: bold;
@@ -325,7 +325,7 @@ body {
   display: none;
 }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1300px) {
   .container {
     grid-template-columns: auto 65% auto;
     -ms-grid-columns: auto 65% auto;
