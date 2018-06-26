@@ -35,7 +35,7 @@ function autocloseNav(x) {
   }
 }
 //$(".icon").css("line-height", $(".img").css("height"));
-var x = window.matchMedia("(min-width: 1200px)");
+var x = window.matchMedia("(min-width: 1300px)");
 autocloseNav(x);
 x.addListener(autocloseNav);
 var acc = document.getElementsByClassName("accordion");

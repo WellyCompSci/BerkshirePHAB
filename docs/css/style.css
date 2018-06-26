@@ -209,6 +209,7 @@ body {
   -ms-grid-column-span: 3;
   -ms-grid-row: 2;
   -ms-grid-row-span: 2;
+  -webkit-transform: translate3d(0,0,0);
   padding: 20px;
   padding-top: 25px;
   z-index: 5;
