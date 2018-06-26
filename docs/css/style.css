@@ -194,6 +194,7 @@ body {
   background-color: white;
   height: 60px;
   overflow: hidden;
+  -webkit-transform: translate3d(0,0,1px);
   border: 3px solid #4CAF50;
 }
 
@@ -278,6 +279,8 @@ body {
   text-align: center;
   text-decoration: none;
   font-weight: bold;
+  -webkit-transform: translate3d(0,0,2px);
+
 }
 
 .butts a:not(.closebtn) {
