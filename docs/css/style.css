@@ -148,7 +148,7 @@ body {
   -ms-grid-rows: 84.8px auto 80px;
   grid-template-areas: 'header header header header header header' '. main main main main .' 'footer footer footer footer footer footer';
   height: 100vh;
-  width: 98.722vw;
+  width: 100vw;
 }
 
 .background {
@@ -881,6 +881,7 @@ body {
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 10px;
+  width: 100%;
 }
 .document-list a{
   text-decoration: none;

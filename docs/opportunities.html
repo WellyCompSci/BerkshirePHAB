@@ -9,6 +9,13 @@
     <link rel="stylesheet" href="css/style.css">
     <meta name="theme-color" content="#44B83B"/>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <!--[if IE]>
+    <style>
+        .grid-container{
+            width: 100vw;
+        }
+    </style>
+    <![endif]-->
     <script>
         history.pushState(null, null, document.URL);
         window.addEventListener('popstate', function () {
@@ -40,31 +47,6 @@
         <div id="darken">
         </div>
         <div class="main">
-            <div class="container" id="opening">
-                <div class="title">
-                    <h1>Opportunities</h1>
-                </div>
-                <div class="body">
-                    <div class="text-content">
-                        <div class="image-overlay-container">
-                            <div class="image-overlay">
-                                <img src="assets/images/Volunteering%20choice%20left%20image%20in%20opportunities.jpg"/>
-                                <div class="overlay">
-                                    <a class="btn"
-                                       onclick="$('#volunteering').show();$('#employers').hide();$('#opening').hide();">Volunteering</a>
-                                </div>
-                            </div>
-                            <div class="image-overlay">
-                                <img src="assets/images/Employers%20and%20Colleges%20choice%20right%20image%20in%20opportunities.jpg"/>
-                                <div class="overlay">
-                                    <a class="btn"
-                                       onclick="$('#employers').show();$('#volunteering').hide();$('#opening').hide();">Employers
-                                        and Colleges</a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="container" id="volunteering" style="display: none;">
                 <div class="title">
                     <h1>Volunteering</h1>
@@ -196,7 +178,7 @@
 
                     <div class="social">
                         <a class="social-image" href="https://www.facebook.com/BerkshirePhab"><i
-                                class="fab fa-facebook-square"></i><a>
+                                class="fab fa-facebook-square"></i></a>
                             <a class="social-image" href="https://twitter.com/PhabBerkshire"><i
                                     class="fab fa-twitter-square"></i>
                             </a>
