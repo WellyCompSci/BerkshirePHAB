@@ -19,6 +19,8 @@ $(function() {
       }
       else{
         eventsHTML = '<h3 style="text-align: center">No Events to display.</h3>';
+          $("#events-loader").hide();
+
       }
       $("#events").html(eventsHTML);
       $(".event img").each(function() {

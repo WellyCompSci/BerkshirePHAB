@@ -73,7 +73,12 @@ function display_events(event_description, time, date, event_title){
        }
        $("#upcoming-loader").hide();
        $("#upcoming-table").html(text);
-       $("#upcoming").html(text_2)
+       $("#upcoming").html(text_2);
+     }
+     else{
+         $("#upcoming-loader").hide();
+         $("#upcoming-table").html("<h3>No Upcoming Events to Display</h3>");
+         $("#upcoming").html("<h3>No Upcoming Events to Display</h3>");
      }
     });
    }
