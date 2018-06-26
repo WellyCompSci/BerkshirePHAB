@@ -194,9 +194,6 @@ body {
   background-color: white;
   height: 60px;
   overflow: hidden;
-  border: 3px solid #44B83B;
-  -webkit-transform: translate3d(0,0,1px);
-  transform: translate3d(0,0,1px);
 }
 
 .container .title h1 {
