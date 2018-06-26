@@ -194,6 +194,7 @@ body {
   background-color: white;
   height: 60px;
   overflow: hidden;
+  border: 3px solid #4CAF50;
 }
 
 .container .title h1 {
