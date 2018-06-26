@@ -10,6 +10,15 @@
   <link rel="stylesheet" href="css/style.css">
   <meta name="theme-color" content="#44B83B" />
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <script>
+    history.pushState(null, null, document.URL);
+    window.addEventListener('popstate', function() {
+      if (!$("#opening").is(":visible")) {
+        history.pushState(null, null, document.URL);
+        window.location.reload();
+      }
+    });
+  </script>
 </head>
 
 <body>
@@ -72,22 +81,18 @@
             <div class="image-card" style="float: right; margin: 5px;">
               <img src="https://scontent-lht6-1.xx.fbcdn.net/v/t31.0-8/14500634_1134154803301125_4125088856966329629_o.jpg?_nc_cat=0&oh=310a2714981068d0341d63ec550f1baf&oe=5B87F76C" style="width: 100%; height: auto;" />
             </div>
-            <p>Berskshire Phab was founded by volunteers and it is thanks to everyone who has volunteered over the years that we are still able to help so many people. There are lots of ways that you can volunteer with us and they all make a difference.
-              If you've never volunteered before why not contact us at the centre.
-            </p>
-            <h3><b>Club Volunteers</b></h3>
-            <p>Berkshire Phab's clubs are run by our experienced staff with help from volunteers, and we need lots of people to help keep the centre open every week. Volunteering with us can be rewarding and inspiring. If you've never worked with disabled
-              people before don't be scared! Phab is the ideal environment to enjoy the company of some of the most interesting and dynamic people you'll ever meet, and all the while you will find the experience hugely rewarding. Volunteers can help out
-              on one or more days at our drop-in club for adults which takes place Monday to Thursday, 10am to 4pm. We also need volunteers at our youth club which takes place on a Saturday 9.30-1pm.
-            </p>
+            <p>Volunteering offers vital help to people in need while making you happier and healthier. It helps to keep you mentally and physically stimulated, provides a sense of purpose, increases self-confidence and boosts your social skills, helps you reach out and give back to the community, meet new people and make new friends, helps you to learn new skills and even advance your career, as well as it being fun, inspiring, rewarding and fulfilling.
+So, how about volunteering with us! At Berkshire Phab there are many ways you can do it: <br><br>
+1.	Weekday Clubs – run by staff and volunteers <br><br>
+2.	Saturday Morning Youth Club – run by volunteers only <br><br>
+3.	Trustees – volunteers only; responsible for the future of the charity, staff and members through ensuring the affordability of opening each day and helping as many people as possible. Requires management skills in finance, human resources, operations or sales and marketing <br><br>
+4.	Links to local businesses and colleges, opportunities for work experience placements for students and employees and for fundraising events <br><br>
+If you are interested in volunteering with us, please complete the form above and email it to ronald.larkoh@berkshirephab.org . If you have any further questions or would like to enquire more details, please contact us at the Berkshire Phab centre. </p>
+
             <div class="image-card" style="float: left; margin: 5px;">
               <img src="https://scontent-lht6-1.xx.fbcdn.net/v/t31.0-8/25358350_1558302917552976_8723076416511899722_o.jpg?_nc_cat=0&oh=a40d2e7b6456cd0ca639d65e8b09d45c&oe=5B95F4F3" style="width: 100%; height: auto;" />
             </div>
-            <h3><b>Trustees</b></h3>
-            <p>Our trustees are responsible for the future of the charity, the staff and the members. All our trustees are volunteers and work tirelessly behind the scenes to ensure that we can afford to open each day and help as many people as we can. If
-              you have management skills in finance, human resources, operations or sales and marketing, and would like to both take on a challenge and give something back in your local community, we'd love to hear from you.
-            </p><br>
-            <a class="btn" onclick="$('#volunteering').hide();$('#employers').hide();$('#opening').show();">Back</a>
+            <a class="btn" style="display: block; margin: auto; width: 100px;" onclick="$('#volunteering').hide();$('#employers').hide();$('#opening').show();">Back</a>
             <!-- Edit Above Here -->
           </div>
         </div>
@@ -106,7 +111,10 @@
             <div class="image-card" style="float: left; margin: 5px;">
               <img src="https://scontent-lht6-1.xx.fbcdn.net/v/t31.0-8/25358350_1558302917552976_8723076416511899722_o.jpg?_nc_cat=0&oh=a40d2e7b6456cd0ca639d65e8b09d45c&oe=5B95F4F3" style="width: 100%; height: auto;" />
             </div>
-            <a class="btn" onclick="$('#volunteering').hide();$('#employers').hide();$('#opening').show();">Back</a>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget faucibus nisi, eu porta lorem. Nam rhoncus arcu augue, non tristique tortor vehicula commodo. Duis lacinia ultrices nunc, eu commodo tortor tincidunt quis. Quisque
+              commodo ipsum neque. Etiam id ipsum tristique, vehicula purus quis, hendrerit turpis. Mauris pulvinar ipsum sem, sit amet posuere quam ornare vitae. Maecenas rutrum quam quis orci interdum rhoncus. Phasellus ut augue tincidunt, rutrum erat
+              eget, auctor felis. Quisque ex mauris, porttitor a egestas a, laoreet sed enim.</p>
+            <a class="btn" style="display: block; margin: auto; width: 100px;" onclick="$('#volunteering').hide();$('#employers').hide();$('#opening').show();">Back</a>
             <!-- Edit Above Here -->
           </div>
         </div>
