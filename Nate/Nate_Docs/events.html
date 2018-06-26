@@ -6,9 +6,18 @@
   <title>Berkshire PHAB Demo Page</title>
   <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/events.css" />
   <meta name="theme-color" content="#44B83B" />
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <!--[if IE]>
+  <style>
+    .grid-container{
+      width: 100vw;
+    }
+  </style>
+  <![endif]-->
+
 </head>
 
 <body>
@@ -32,15 +41,30 @@
       <div class="main">
         <div class="container">
           <div class="title">
-            <h1>Loading</h1>
+            <h1>Upcoming Events</h1>
           </div>
           <div class="body">
             <div class="text-content">
               <!-- Edit Below Here -->
-              <div class="loader" id="event-loader"></div>
-              <div id="app"></div>
-              <!-- Edit Above Here -->
+              <div class="loader" id="upcoming-loader"></div>
+              <section>
+                <table id="upcoming-table">
+                </table>
+              </section>
             </div>
+            <!-- Edit Above Here -->
+          </div>
+        </div>
+        <div class="container">
+          <div class="title">
+            <h1>Past Events</h1>
+          </div>
+          <div class="body">
+            <!-- Edit Below Here -->
+            <div class="loader" id="events-loader"></div>
+            <div class="app" id="events"></div>
+
+            <!-- Edit Above Here -->
           </div>
         </div>
       </div>
@@ -51,7 +75,7 @@
           </div>
 
           <div class="social">
-            <a class="social-image" href="https://www.facebook.com/BerkshirePhab"><i class="fab fa-facebook-square"></i><a>
+            <a class="social-image" href="https://www.facebook.com/BerkshirePhab"><i class="fab fa-facebook-square"></i></a>
                         <a class="social-image" href="https://twitter.com/PhabBerkshire"><i class="fab fa-twitter-square"></i>
                         </a>
           </div>
@@ -69,6 +93,11 @@
       </div>
     </div>
   </div>
+  <script src="js/calendar.js">
+  </script>
+  <script src="https://apis.google.com/js/client.js?onload=loadCalendarApi">
+  </script>
   <script src="js/navbar.js"></script>
-  <script src="js/event.js"></script>
+  <script src="js/events.js"></script>
+
 </body>

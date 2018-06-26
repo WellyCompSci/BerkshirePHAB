@@ -6,7 +6,8 @@ function DropDown() {
 function openNav() {
   var w = parseInt(window.innerWidth);
   if (w <= 550) {
-    var x = document.getElementById("butts");
+      document.getElementById("darken").style.display = "none";
+      var x = document.getElementById("butts");
     if (x.className === "butts") {
       x.className += " responsive";
     } else {
@@ -35,7 +36,7 @@ function autocloseNav(x) {
   }
 }
 //$(".icon").css("line-height", $(".img").css("height"));
-var x = window.matchMedia("(min-width: 1200px)");
+var x = window.matchMedia("(min-width: 1300px)");
 autocloseNav(x);
 x.addListener(autocloseNav);
 var acc = document.getElementsByClassName("accordion");

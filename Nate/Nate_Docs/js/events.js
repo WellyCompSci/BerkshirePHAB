@@ -1,25 +1,25 @@
 $(function() {
   //Events
   $.ajax({
-    url: "https://www.googleapis.com/blogger/v3/blogs/2627810758631398548/posts?key=AIzaSyBM1J7SifXYWug5civN-aI3O2cU5EX_f_Y",
+    url: "https://www.googleapis.com/blogger/v3/blogs/7927179732203083965/posts?key=AIzaSyAMNPX5M4eo9AWHsf5QCmqrXD0n2dVowNw",
     dataType: "json",
     method: "get",
     success: function(response) {
       var eventsHTML = "";
-      response.items.forEach(function(item) {
-        $("#events-loader").hide();
-        //eventsHTML += "<a href='events.html?postID=" + item.id + "' class='event'>" + item.content + "</a>";
-        var html = $.parseHTML(item.content);
-        var published = new Date(item.published);
-        eventsHTML += '<div class="event card"><input type="hidden" name="id" value="' + item.id + '"/><div class="card-container"><span class="event-date">' + published.toUTCString() + '</span><h2>' + item.title +
-          '</h2><div class="event-text">';
-        html.forEach(function(elem) {
-          if (elem.innerHTML) {
-            eventsHTML += elem.innerHTML;
-          }
-        });
-        eventsHTML += '</div></div></div>';
-      });
+      if(response.items) {
+          response.items.forEach(function (item) {
+              $("#events-loader").hide();
+              //eventsHTML += "<a href='events.html?postID=" + item.id + "' class='event'>" + item.content + "</a>";
+              var published = new Date(item.published);
+              eventsHTML += '<div class="event card"><input type="hidden" name="id" value="' + item.id + '"/><div class="card-container"><span class="event-date">' + published.toUTCString() + '</span><h2>' + item.title +
+                  '</h2><div class="event-text">';
+              eventsHTML += item.content;
+              eventsHTML += '</div></div></div>';
+          });
+      }
+      else{
+        eventsHTML = '<h3 style="text-align: center">No Events to display.</h3>';
+      }
       $("#events").html(eventsHTML);
       $(".event img").each(function() {
         var $img = $(this).clone();

@@ -1,6 +1,6 @@
-var CLIENT_ID = '713590924881-g1fifkdfiem0qleul5hdojef5jfovh6j.apps.googleusercontent.com';
-var API_KEY = 'AIzaSyBM1J7SifXYWug5civN-aI3O2cU5EX_f_Y';
-var CAL_ID = 'phabexample@gmail.com';
+var CLIENT_ID = '841809977007-k3oeo10ak6pa80dk6543vb8u4230gans.apps.googleusercontent.com';
+var API_KEY = 'AIzaSyAMNPX5M4eo9AWHsf5QCmqrXD0n2dVowNw';
+var CAL_ID = 'phabberkshire@gmail.com';
 var SCOPES = ["https://www.googleapis.com/auth/calendar.readonly"];
 
 
