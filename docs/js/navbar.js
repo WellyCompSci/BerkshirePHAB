@@ -6,7 +6,8 @@ function DropDown() {
 function openNav() {
   var w = parseInt(window.innerWidth);
   if (w <= 550) {
-    var x = document.getElementById("butts");
+      document.getElementById("darken").style.display = "none";
+      var x = document.getElementById("butts");
     if (x.className === "butts") {
       x.className += " responsive";
     } else {
