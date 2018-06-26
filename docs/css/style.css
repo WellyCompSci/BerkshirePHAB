@@ -146,8 +146,8 @@ body {
   grid-template-rows: 84.8px auto 80px;
   -ms-grid-rows: 84.8px auto 80px;
   grid-template-areas: 'header header header header header header' '. main main main main .' 'footer footer footer footer footer footer';
-  row-gap: 3vw;
   height: 100vh;
+  width: 100%;
 }
 
 .background {
