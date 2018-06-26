@@ -6,6 +6,7 @@ body {
   font-family: sans-serif;
   margin: 0;
   padding: 0;
+  z-index: 1;
   height: 100vh;
     overflow-x: hidden;
   transition: background-color .5s;
@@ -148,6 +149,7 @@ body {
   -ms-grid-rows: 84.8px auto 80px;
   grid-template-areas: 'header header header header header header' '. main main main main .' 'footer footer footer footer footer footer';
   height: 100vh;
+  z-index: 1;
 }
 
 .background {
@@ -165,7 +167,7 @@ body {
   margin: 0 auto;
   grid-area: main;
   -ms-grid-row: 2;
-  z-index: 5;
+  z-index: 40;
 }
 
 .container {
@@ -187,12 +189,14 @@ body {
   -ms-grid-column: 2;
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
-  z-index: 7;
+  z-index: 70;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   background-color: white;
   height: 60px;
   overflow: hidden;
   border: 3px solid #44B83B;
+  -webkit-transform: translate3d(0,0,1px);
+  transform: translate3d(0,0,1px);
 }
 
 .container .title h1 {
@@ -212,7 +216,7 @@ body {
   -webkit-transform: translate3d(0,0,0);
   padding: 20px;
   padding-top: 25px;
-  z-index: 5;
+  z-index: 50;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   background-color: #4CAF50;
   border-radius: 10px;
