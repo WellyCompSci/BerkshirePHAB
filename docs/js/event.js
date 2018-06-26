@@ -13,7 +13,7 @@ function qs(search_for) {
 $(function() {
   var queryString = qs("postID");
   $.ajax({
-    url: "https://www.googleapis.com/blogger/v3/blogs/2627810758631398548/posts/" + queryString + "?key=AIzaSyBM1J7SifXYWug5civN-aI3O2cU5EX_f_Y",
+    url: "https://www.googleapis.com/blogger/v3/blogs/7927179732203083965/posts/" + queryString + "?key=AIzaSyAMNPX5M4eo9AWHsf5QCmqrXD0n2dVowNw",
     dataType: "jsonp",
     method: "get",
     success: function(response) {
