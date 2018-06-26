@@ -18,15 +18,6 @@ This website has been designed by a student-led organisation known as Welly Apps
         }
     </style>
     <![endif]-->
-    <script>
-        history.pushState(null, null, document.URL);
-        window.addEventListener('popstate', function () {
-            if (!$("#opening").is(":visible")) {
-                history.pushState(null, null, document.URL);
-                window.location.reload();
-            }
-        });
-    </script>
 </head>
 
 <body>
@@ -65,7 +56,7 @@ This website has been designed by a student-led organisation known as Welly Apps
                                 <b><h2>If you are interested in volunteering with us:</h2></b>
                                 <div class="formbutt">
                                     <a href="./assets/documents/Volunteers%20Application%20Form%202018.docx" download>Download
-                                        the application form</a>
+                                        the volunteer application form</a>
                                 </div>
                             </div>
                         </div>
@@ -135,12 +126,23 @@ This website has been designed by a student-led organisation known as Welly Apps
                     <div class="body">
                         <div class="text-content">
                             <!-- Edit Below Here -->
-                            <div class="image-card" style="float: right; margin: 5px;">
+                            <div class="long-image-card">
                                 <img src="assets/images/Left%20image%20in%20employers%20and%20colleges.jpg"
                                      style="width: 100%; height: auto;"/>
+                                <div class="bgopacity">
+                                </div>
+                                <div class="imagetext">
+                                    <b><h2>If you are interested in working for us:</h2></b>
+                                    <div class="formbutt">
+                                        <a href="assets/documents/Staff%20Application%20Form%202018.doc">Download the staff application form</a>
+                                    </div>
+                                </div>
                             </div>
                             <br/>
-                            <a href="assets/documents/Staff%20Application%20Form%202018.doc" class="btn">Complete This Form</a>
+                            <div class="image-card" style="float: right; margin: 5px;">
+                                <img src="assets/images/Right%20image%20in%20employers%20and%20colleges.jpg"
+                                     style="width: 100%; height: auto;"/>
+                            </div>
                             <p>Berkshire Phab offers opportunities for people of all ages and backgrounds to provide a
                                 positive impact on their local community, which is why we offer work experience
                                 placements for both employees and students. We strongly believe that
@@ -152,10 +154,6 @@ This website has been designed by a student-led organisation known as Welly Apps
                                 contact us through our charity email and phone number or visit one of our local centres.
                                 More details on how you can get in touch with the charity can be found on the Contact Us
                                 page.</p>
-                            <div class="image-card" style="float: left; margin: 5px;">
-                                <img src="assets/images/Right%20image%20in%20employers%20and%20colleges.jpg"
-                                     style="width: 100%; height: auto;"/>
-                            </div>
                                                      <!-- Edit Above Here -->
                         </div>
                     </div>
@@ -166,7 +164,7 @@ This website has been designed by a student-led organisation known as Welly Apps
                 </div>
                 <div class="body">
                     <div class="text-content">
-                        <div class="image-card" style="float: right; margin: 5px;">
+                        <div class="image-card" style="float: left; margin: 5px;">
                             <img src="assets/images/guidePhab.jpg" style="width: 100%; height: auto;" />
                         </div>
                         <p>Work experience can be arranged by contacting the charity through email or phone. For
