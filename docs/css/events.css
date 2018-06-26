@@ -83,22 +83,27 @@
   padding-right: 3px;
   font-size: 10px;
   /* height: 190px; */
-  height: 67%;
+  height: 63%;
 }
 
 .upcoming-header h1 {
-  padding-left: 10px;
+  margin: 0;
 }
 
 .upcoming-container {
   width: 100%;
-  height: auto;
+  height: 37%;
+}
+
+.upcoming-container p {
+  margin: 0;
 }
 
 .upcoming-gallery {
   padding: auto;
   margin: 1%;
   margin-top: 4%;
+  padding: 10px;
   border-radius: 15px;
   border: 1px solid #ccc;
   display: inline-block;
